@@ -249,6 +249,11 @@ function library:NewWindow(library_title, cfg_location)
     local is_first_tab = true
     local selected_tab
     local tab_num = 1
+
+    function menu.ChangeTitle(Title)
+        Title.Text = Title
+    end
+
     function menu.Tab(tab_image)
         local tab = {tab_num = tab_num}
         menu.values[tab_num] = {}
